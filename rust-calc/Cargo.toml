@@ -1,0 +1,31 @@
+[package]
+name = "rust-calc"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.8"
+criterion = "0.5"
+
+[profile.bench]
+opt-level = 3
+codegen-units = 1
+lto = true
+
+[[bench]]
+name = "fib"
+harness = false
+[[bench]]
+name = "matrix"
+harness = false
+[[bench]]
+name = "nqueens"
+harness = false
+[[bench]]
+name = "prime"
+harness = false
+[[bench]]
+name = "quicksort"
+harness = false
